@@ -1,0 +1,55 @@
+{
+  "RQ React TS Component": {
+    "scope": "typescriptreact",
+    "prefix": "quintal-react-component",
+    "description": "Boilerplate Typescipt React component",
+    "body": [
+      "import clsx from 'clsx';",
+      "import { ReactElement } from 'react';",
+      "",
+      "export type ${1:ComponentName}Props = {};",
+      "",
+      "export function ${1:ComponentName}(props: ${1:ComponentName}Props): ReactElement | null {",
+      "    return ${2:<div />};",
+      "}",
+      ""
+    ]
+  },
+  "RQ React TS Forwardref Component": {
+    "scope": "typescriptreact",
+    "prefix": "quintal-react-forwardref-component",
+    "description": "Boilerplate Typescipt React forwardref component",
+    "body": [
+      "import clsx from 'clsx';",
+      "import { ReactElement, forwardRef, ForwardedRef } from 'react';",
+      "",
+      "export type ${1:ComponentName}Props = {};",
+      "",
+      "export type ${1:ComponentName}Handle = {};",
+      "",
+      "function ${1:ComponentName}Ref(props: ${1:ComponentName}Props, forwardedRef: ForwardedRef<${1:ComponentName}Handle>): ReactElement | null {",
+      "    return ${2:<div />};",
+      "}",
+      "",
+      "export const ${1:ComponentName} = forwardRef(${1:ComponentName}Ref);",
+      ""
+    ]
+  },
+  "RQ React TS Next Component": {
+    "scope": "typescriptreact",
+    "prefix": "quintal-next-async-component",
+    "description": "Boilerplate Typescipt React Next.JS component",
+    "body": [
+      "import clsx from 'clsx';",
+      "import { ReactElement } from 'react';",
+      "import 'server-only';",
+      "",
+      "export type ${1:ComponentName}Props = {};",
+      "",
+      "export default async function ${1:ComponentName}(props: ${1:ComponentName}Props): Promise<ReactElement | null> {",
+      "    return ${2:<div />};",
+      "}",
+      ""
+    ]
+  }
+}

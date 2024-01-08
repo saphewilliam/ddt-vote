@@ -1,0 +1,7 @@
+{
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "always"
+  },
+  "scss.validate": false,
+  "colorize.languages": ["css", "scss", "javascript", "typescript"],
+}

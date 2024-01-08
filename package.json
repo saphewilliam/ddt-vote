@@ -1,0 +1,53 @@
+{
+  "name": "ddt-vote",
+  "scripts": {
+    "build": "next build",
+    "dev": "next dev",
+    "lint": "pnpm lint:fix && pnpm lint:types",
+    "lint:check": "next lint",
+    "lint:fix": "pnpm lint:check --fix",
+    "lint:types": "tsc",
+    "migrate:check": "drizzle-kit check:sqlite --config=./drizzle.config.ts",
+    "migrate:deploy": "pnpm tsn --files scripts/migrate",
+    "migrate:drop": "drizzle-kit drop --config=./drizzle.config.ts",
+    "migrate:generate": "drizzle-kit generate:sqlite --config=./drizzle.config.ts",
+    "migrate:push": "drizzle-kit push:sqlite --config=./drizzle.config.ts",
+    "migrate:update": "drizzle-kit up:sqlite --config=./drizzle.config.ts",
+    "start": "next start",
+    "tsn": "ts-node -T -r tsconfig-paths/register -r dotenv/config -O \"{\\\"module\\\":\\\"commonjs\\\"}\""
+  },
+  "dependencies": {
+    "@libsql/client": "0.4.0-pre.7",
+    "@quintal/environment": "0.1.0",
+    "@quintal/result": "0.2.0",
+    "@saphe/react-form": "1.0.0",
+    "clsx": "2.1.0",
+    "drizzle-orm": "0.29.3",
+    "nanoid": "<4.0.0",
+    "next": "14.0.4",
+    "next-safe-action": "6.0.1",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "server-only": "0.0.1",
+    "zod": "3.22.4"
+  },
+  "devDependencies": {
+    "@quintal/config": "0.2.0",
+    "@tailwindcss/forms": "0.5.7",
+    "@types/node": "20.10.7",
+    "@types/react": "18.2.47",
+    "@types/react-dom": "18.2.18",
+    "autoprefixer": "10.4.16",
+    "better-sqlite3": "9.2.2",
+    "dotenv": "16.3.1",
+    "drizzle-kit": "0.20.10",
+    "drizzle-zod": "0.5.1",
+    "postcss": "8.4.33",
+    "sass": "1.69.7",
+    "tailwind-merge": "2.2.0",
+    "tailwindcss": "3.4.1",
+    "ts-node": "10.9.2",
+    "tslib": "2.6.2",
+    "typescript": "5.3.3"
+  }
+}
