@@ -1,3 +1,5 @@
+'use server';
+
 import { ok, runResult } from '@quintal/result';
 import { action } from '@/lib/action';
 import { database } from '@/lib/database';

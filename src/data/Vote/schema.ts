@@ -4,7 +4,7 @@ import { createInsertSchema, createSelectSchema } from 'drizzle-zod';
 import { meta, relation } from '@/lib/database';
 import { statements } from '../Statement/schema';
 
-export const voteValue = ['for', 'against'] as const;
+export const voteValue = ['for', 'neutral', 'against'] as const;
 export type VoteValue = (typeof voteValue)[number];
 
 export const votes = sqliteTable('votes', {

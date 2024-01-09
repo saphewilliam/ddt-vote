@@ -9,7 +9,7 @@ export type RootLayoutProps = {
 
 export const metadata: Metadata = {
   title: 'DDT Vote',
-  icons: '/img/ddt_logo_black.png',
+  icons: '/favicon.png',
 };
 
 export default function RootLayout(

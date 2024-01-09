@@ -5,6 +5,7 @@ import { meta } from '@/lib/database';
 
 export const statements = sqliteTable('statements', {
   ...meta,
+  createdById: text('created_by_id', { mode: 'text' }).notNull(),
   title: text('title', { mode: 'text', length: 255 }).notNull(),
 });
 
@@ -12,4 +13,6 @@ export type SelectStatement = InferSelectModel<typeof statements>;
 export type InsertStatement = InferInsertModel<typeof statements>;
 
 export const selectStatementSchema = createSelectSchema(statements);
-export const insertStatementSchema = createInsertSchema(statements);
+export const insertStatementSchema = createInsertSchema(statements).pick({
+  title: true,
+});

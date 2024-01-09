@@ -1,0 +1,1 @@
+ALTER TABLE statements ADD `created_by_id` text NOT NULL;
